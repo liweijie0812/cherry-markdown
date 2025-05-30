@@ -29,8 +29,10 @@ jobs:
 
       - run: |
             mkdir playground
-            cp examples/*.html playground
+            cp -r packages/cherry-markdown/dist playground
             cp -r examples/assets playground
+            cp examples/*.html playground
+           
 
       - uses: actions/upload-artifact@v4
         with:
